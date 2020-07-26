@@ -1,0 +1,50 @@
+Name:         reverseproxy-7764955d9-sb7np
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.99.101
+Start Time:   Wed, 22 Jul 2020 05:10:05 +0000
+Labels:       pod-template-hash=7764955d9
+              service=reverseproxy
+              version=v2
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.7
+IPs:
+  IP:           172.17.0.7
+Controlled By:  ReplicaSet/reverseproxy-7764955d9
+Containers:
+  reverseproxy:
+    Container ID:   docker://f249d5eeac52290eeab59ff444412734cd2034bf306a31a333da422c4371891e
+    Image:          aristidesama/reverseproxy
+    Image ID:       docker-pullable://aristidesama/reverseproxy@sha256:40eaef84c54f7b0a698ccccb2e6ae381f6152ca13bbac2a8e3fee48aeb8504d4
+    Port:           8081/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 22 Jul 2020 05:10:18 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  1Gi
+    Requests:
+      cpu:        250m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-xjlh5 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  default-token-xjlh5:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-xjlh5
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
